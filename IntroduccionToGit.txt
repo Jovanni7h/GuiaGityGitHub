@@ -1,0 +1,71 @@
+-Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones.
+
+-GitHub es un sitio para alojar proyectos que utiliza el sistema de control de versiones Git. GitHub es una aplicacion web donde puedes demostrar y compartir lo que sabes hacer.
+
+Un sistema de control de versiones como Git nos ayuda a guardar el historial de cambios y crecimiento de los archivos de nuestro proyecto.
+
+Para empezar debes conocer que es un repositorio: Un repositio en este caso es un directorio en el que se van a almacenar los archivos de nuestro projectos.
+
+Este repositorio se debe inicializar para que git comience a trabajar, y eso se hace de la siguiente manera
+1.- Seleccionar el directorio de su preferencia.
+
+2.- Abrir una terminal en el directorio seleccionado y escribir el siguiente comando: 
+  git init
+
+Ahora podemos arrastrar archivos de texto plano ya sea codigo o lo que sea, a nuestro directorio o crear archivos ahi mismo.
+
+Antes de hacer cualquier cosa debemos decirle a git quie somos para que el registre quien agrego que y cuando lo hizo, y eso se hace con los siguientes comandos:
+
+"LO PRIMERO QUE SE DEBE HACER ES CONFIGURAR GIR PARA DARLE NUESTROS DATOS DE USUARIO",con los siguientes comandos:
+    git config --global user.name "Aqui va tu nombre"
+    git config --global user.email "Aqui va tu E-mail@gmail.com"
+
+Una vez que tengamos nuestros archivos en el directorio, debemos agregarlos al area de Staging o area de preparacion que practicamente es subir los archivos a la memoria Ram y eso se hace con el siguiene comando:
+  git add nombre_archivo.extension_del_archivo
+
+O si son vario archivos, se puede usar el siguiente comando para agregar todo a staging:
+  git add . 
+
+Despues se tiene que agregar los archivos al repositorio y eso se hace con el siguiente comando:
+  git commit -m "Aqui se escribe cualquier cosa que te ayude a identificar esos cambio"
+
+"Cada commit es una nueva version por lo tanto lo que pongamos en el mensaje del commit nos ayudara a identificar las veriones"
+
+Una manera de hacer git add y git commit al mismo tiempo es usando el siguiente comando:
+  git commit -am "Aqui va el mensaje"
+
+"Este comando solo sirve para los archivos que ya se les ha dado git add alguna vez no sirve para los archivos que se agregaran por primera vez a Staging"
+
+Comandos:
+git status: Este comando nos permite conocer el estado de todos nuestros archivos presentes en el directorio de esta manera podemos saber si tenemos algo pendiente por agregar a Staging o al repositorio.
+
+git reset HEAD: Nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anterior.
+"HEAD, asi se le dice al ultimo commit que esta en la rama Master.
+Por defecto al agregar un archivo al repositorio, Git lo guarda en la rama Master"
+Por lo que el ultimo comando sacara del area de Staged al ultimo commit hecho (los ultimos cambios hechos).
+
+git rm --cached archivo.txt: Para sacar del área de staging CUALQUIER ARCHIVO
+
+git show historia.txt: Para ver que se modifico en el archivo
+
+git log: Para ver la historia de un archivo, al usar este comando saldra algo como esto:
+    commit 5a54f429dc58f2c5d94f0079e0d5cf4edda9e622  
+    Author: Jovanni Martinez <mtzjovanni7@gmail.com>
+    Date:   Fri May 29 02:13:47 2020 -0500
+    Modifique mi README 1
+Explicacion:
+    La primera linea es el identificador unico de cada commit
+    La segunda linea es el autor de ese commit
+    La tercera la fecha
+    Y la cuarta linea es el mensaje que se escribio al crear ese commit
+
+git diff:Para comparar commit y ver la diferencia que hay entre uno y otro
+Sintaxis:
+    git diff Id_commit_1 Id_commit_2
+
+git log --stat: Para poder los cambios especificos en cuales archivos a partir del commit
+
+git branch nombre_de_rama: Para crear una nueva rama
+
+git checkout header: Para cambiarnos a la rama header creada anteriormente con el comando git branch
+
