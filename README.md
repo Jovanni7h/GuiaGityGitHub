@@ -1,6 +1,6 @@
 # GuiaGityGitHub
 
-# Mi nombre es Jovanni soy estudiante de Informatica
+# Mi nombre es Jovanni soy Informatico
 
 ---
 
